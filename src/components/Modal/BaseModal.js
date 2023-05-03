@@ -100,6 +100,11 @@ class BaseModal extends PureComponent {
                     this.props.onClose();
                 }}
 
+                onContextMenu={(e) => {
+                    e.preventDefault();
+                    this.props.onClose();
+                }}
+
                 // Note: Escape key on web/desktop will trigger onBackButtonPress callback
                 // eslint-disable-next-line react/jsx-props-no-multi-spaces
                 onBackButtonPress={this.props.onClose}
