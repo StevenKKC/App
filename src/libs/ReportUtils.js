@@ -2019,7 +2019,7 @@ function shouldReportBeInOptionList(report, currentReportId, isInGSDMode, iouRep
     }
 
     // Hide thread reports that haven't been commented on
-    if (isThread(report) && !report.lastMessageText) {
+    if (isThread(report) && !isTaskReport(report) && !report.lastMessageText) {
         return false;
     }
 
